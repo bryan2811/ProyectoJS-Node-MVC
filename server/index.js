@@ -1,10 +1,11 @@
-// Importar Express
+// Importar Express y Rutas
 const express = require('express');
+const routes = require('./routes');
 
 // Configurar Express
 const app = express();
-app.use('/', (req, res) => {
-    res.send('Hola Mundo en NodeJS');
-});
+
+// Cargar las rutas
+app.use('/', routes());
 
 app.listen(3000);
