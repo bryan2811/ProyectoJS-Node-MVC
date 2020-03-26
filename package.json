@@ -1,0 +1,19 @@
+{
+  "name": "node-mvc",
+  "version": "1.0.0",
+  "description": "Proyecto en NodeJS Express y Sequelize",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryan2811/ProyectoJS-Node-MVC.git"
+  },
+  "author": "Bryan Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bryan2811/ProyectoJS-Node-MVC/issues"
+  },
+  "homepage": "https://github.com/bryan2811/ProyectoJS-Node-MVC#readme"
+}
