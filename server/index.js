@@ -12,6 +12,14 @@ app.set('view engine', 'pug');
 // Importando los archivos estáticos (public)
 app.use(express.static('public'));
 
+// Muestra el año actual en el footer
+app.use( (req, res, next) => {
+    // Crear una nueva fecha
+    const fecha = new Date();
+    res.locals.fechaActual = fecha.getFullYear();
+    return next();
+});
+
 // Añadir las vistas
 app.set('views', path.join(__dirname, './views'));
 
