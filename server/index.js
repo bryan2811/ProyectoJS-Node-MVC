@@ -9,6 +9,9 @@ const app = express();
 // Habilitar Pug
 app.set('view engine', 'pug');
 
+// Importando los archivos estáticos (public)
+app.use(express.static('public'));
+
 // Añadir las vistas
 app.set('views', path.join(__dirname, './views'));
 
