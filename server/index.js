@@ -3,6 +3,9 @@ const express = require('express');
 const path = require('path');
 const routes = require('./routes');
 
+// Importando config/index.js
+const configs = require('./config');
+
 // Configurar Express
 const app = express();
 
@@ -11,6 +14,12 @@ app.set('view engine', 'pug');
 
 // Importando los archivos estáticos (public)
 app.use(express.static('public'));
+
+// Validar si estamos en desarrollo o producción
+const config = configs[app.get('env')]; // Obtener el ambiente (Desarrollo o Producción)
+
+// Creamos la variable para el sitio web
+app.locals.titulo = config.nombresitio;
 
 // Muestra el año actual en el footer
 app.use( (req, res, next) => {

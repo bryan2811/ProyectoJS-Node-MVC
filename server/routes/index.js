@@ -7,7 +7,9 @@ module.exports = function() {
     });
 
     router.get('/nosotros', (req, res) => {
-        res.render('nosotros'); // Nosotros
+        res.render('nosotros', {
+            pagina: 'Sobre Nosotros'
+        }); // Nosotros
     });
 
     return router;
