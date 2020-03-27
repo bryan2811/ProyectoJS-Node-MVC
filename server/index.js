@@ -6,6 +6,14 @@ const routes = require('./routes');
 // Importando config/index.js
 const configs = require('./config');
 
+// Importando base de datos
+const db = require('./config/database');
+
+// Probando base de datos
+db.authenticate()
+    .then(() => console.log('DB Conectada'))
+    .catch(error => console.log(error))
+
 // Configurar Express
 const app = express();
 
