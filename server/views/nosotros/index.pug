@@ -1,3 +1,26 @@
 extends ../layout/index
 block contenido
-    h1= pagina
+    main.container.mt-5
+        .row
+            .col-md-5
+                img.img-fluid(src="img/nosotros.jpg", alt="Imagen de Nosotros")
+            .col-md-7
+                h1= pagina
+                blockquote Quisque interdum felis sem, quis rutrum diam auctor eget. Nulla non pellentesque ex. Fusce feugiat, quam eu suscipit hendrerit, enim turpis mollis est, fermentum dignissim urna lorem et lectus. Morbi pellentesque tincidunt odio tristique mollis.
+                p Curabitur volutpat orci non felis dapibus, commodo aliquam urna sagittis. Phasellus elementum non diam et varius. Pellentesque eu commodo libero, a convallis augue. Phasellus ac mollis arcu. Nullam sollicitudin nibh eu velit lacinia, sit amet suscipit arcu dictum. Nullam nec lectus sed nunc ornare faucibus. Nam interdum eget lacus eget convallis. Maecenas nec volutpat lacus. Aliquam vitae sollicitudin lectus. Aenean sollicitudin consectetur leo, nec porta metus fermentum sit amet. Donec imperdiet dui at lacus faucibus sagittis.
+                p Donec ullamcorper lacus a eros interdum varius. Nulla facilisi. Fusce quis mattis orci, a auctor felis. Aenean dictum luctus commodo. Vestibulum rhoncus
+    .listado-iconos
+        .container.mt-5.py-5.text-center
+            .row
+                .col-md-4
+                    img(src="img/icono_seguridad.svg", class="img-fluid mb-4")
+                    h2.mb-4 Seguridad
+                    p Maecenas nec volutpat lacus. Aliquam vitae sollicitudin lectus. Aenean sollicitudin consectetur leo, nec porta metus fermentum sit amet.
+                .col-md-4
+                    img(src="img/icono_destinos.svg", class="img-fluid mb-4")
+                    h2.mb-4 Mejores Destinos
+                    p Maecenas nec volutpat lacus. Aliquam vitae sollicitudin lectus. Aenean sollicitudin consectetur leo, nec porta metus fermentum sit amet.
+                .col-md-4
+                    img(src="img/icono_precios.svg", class="img-fluid mb-4")
+                    h2.mb-4 Mejor Precio
+                    p Maecenas nec volutpat lacus. Aliquam vitae sollicitudin lectus. Aenean sollicitudin consectetur leo, nec porta metus fermentum sit amet.
