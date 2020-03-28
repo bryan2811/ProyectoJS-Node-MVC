@@ -6,8 +6,10 @@ const Testimonial = require('../models/Testimoniales');
 
 module.exports = function() {
     router.get('/', (req, res) => {
-        res.render('index'); // Inicio
-    });
+        res.render('index', {
+            clase : 'home'
+        });
+    }); // Inicio
 
     router.get('/nosotros', (req, res) => {
         res.render('nosotros', {
