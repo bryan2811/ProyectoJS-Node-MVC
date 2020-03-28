@@ -1,6 +1,8 @@
 // Importar Express y Rutas
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
+
 const routes = require('./routes');
 
 // Importando config/index.js
@@ -36,6 +38,9 @@ app.use( (req, res, next) => {
 
 // Añadir las vistas
 app.set('views', path.join(__dirname, './views'));
+
+// Ejecutando Body Parser 
+app.use(bodyParser.urlencoded({extended: true}));
 
 // Cargar las rutas
 app.use('/', routes());
