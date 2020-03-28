@@ -28,11 +28,12 @@ const config = configs[app.get('env')]; // Obtener el ambiente (Desarrollo o Pro
 // Creamos la variable para el sitio web
 app.locals.titulo = config.nombresitio;
 
-// Muestra el año actual en el footer
+// Muestra el año actual en el footer y genera la ruta
 app.use( (req, res, next) => {
     // Crear una nueva fecha
     const fecha = new Date();
     res.locals.fechaActual = fecha.getFullYear();
+    res.locals.ruta = req.path;
     return next();
 });
 
