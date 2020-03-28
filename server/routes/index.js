@@ -6,10 +6,16 @@ const Testimonial = require('../models/Testimoniales');
 
 module.exports = function() {
     router.get('/', (req, res) => {
-        res.render('index', {
-            clase : 'home'
-        });
-    }); // Inicio
+        Viaje.findAll({
+            limit: 3
+        })
+        .then(viajes => res.render('index', {
+            pagina: 'Próximos Viajes',
+            clase: 'home',
+            viajes
+        }))
+        .catch(error => console.log(error))
+    }); // Página de Inicio
 
     router.get('/nosotros', (req, res) => {
         res.render('nosotros', {
