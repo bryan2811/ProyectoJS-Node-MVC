@@ -43,13 +43,13 @@ module.exports = function() {
 
         let errores = [];
         if (!nombre) {
-            errores.push({'mensaje' : 'Agrega tu Nombre'})
+            errores.push({'mensaje' : 'Agrega tu nombre'})
         }
         if (!correo) {
-            errores.push({'mensaje' : 'Agrega tu Correo'})
+            errores.push({'mensaje' : 'Agrega tu correo'})
         }
         if (!mensaje) {
-            errores.push({'mensaje' : 'Agrega tu Mensaje'})
+            errores.push({'mensaje' : 'Agrega tu mensaje'})
         }
 
         // Revisar por errores

@@ -6,6 +6,10 @@ block contenido
         
         .row
             .col-md-12
+                h2.text-center Agrega un Testimonial
+                if(errores)
+                    each error in errores
+                        .alert.alert-danger.text-center=error.mensaje
 
                 .row.justify-content-center
                     .col-md-8
