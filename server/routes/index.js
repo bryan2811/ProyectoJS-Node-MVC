@@ -19,7 +19,15 @@ module.exports = function() {
             .then(viajes => res.render('viajes', {
                 pagina: 'Próximos Viajes',
                 viajes
-            })) // Nosotros)
+            })) // Viajes
+            .catch(error => console.log(error))
+    });
+
+    router.get('/viajes/:id', (req, res) => {
+        Viaje.findByPk(req.params.id)
+            .then(viaje => res.render('viaje', {
+                viaje
+            })) // Viaje c/u
             .catch(error => console.log(error))
     });
 
