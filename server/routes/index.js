@@ -11,25 +11,31 @@ module.exports = function() {
     router.get('/nosotros', (req, res) => {
         res.render('nosotros', {
             pagina: 'Sobre Nosotros'
-        }); // Nosotros
-    });
+        });
+    }); // Nosotros
 
     router.get('/viajes', (req, res) => {
         Viaje.findAll()
             .then(viajes => res.render('viajes', {
                 pagina: 'Próximos Viajes',
                 viajes
-            })) // Viajes
+            }))
             .catch(error => console.log(error))
-    });
+    }); // Viajes
 
     router.get('/viajes/:id', (req, res) => {
         Viaje.findByPk(req.params.id)
             .then(viaje => res.render('viaje', {
                 viaje
-            })) // Viaje c/u
+            }))
             .catch(error => console.log(error))
-    });
+    }); // Viaje c/u
+
+    router.get('/testimoniales', (req, res) => {
+        res.render('testimoniales', {
+            pagina: 'Testimoniales'
+        });
+    }); // Testimoniales
 
     return router;
 }
