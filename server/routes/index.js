@@ -33,9 +33,11 @@ module.exports = function() {
     }); // Viaje c/u
 
     router.get('/testimoniales', (req, res) => {
-        res.render('testimoniales', {
-            pagina: 'Testimoniales'
-        });
+        Testimonial.findAll()
+            .then(testimoniales => res.render('testimoniales', {
+                pagina: 'Testimoniales',
+                testimoniales
+            }))
     }); // Testimoniales GET
 
     router.post('/testimoniales', (req, res) => {
