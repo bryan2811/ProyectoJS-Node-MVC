@@ -5,6 +5,9 @@ const bodyParser = require('body-parser');
 
 const routes = require('./routes');
 
+// Importando DOTENV
+require('dotenv').config( {path: 'variables.env'} );
+
 // Importando config/index.js
 const configs = require('./config');
 
@@ -46,4 +49,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 // Cargar las rutas
 app.use('/', routes());
 
-app.listen(3000);
+// Puerto y host para la app
+const host = process.env.HOST || '0.0.0.0';
+const port = process.env.PORT || 3000;
+
+app.listen(port, host, () => {
+    console.log('El servidor está funcionando');
+});
