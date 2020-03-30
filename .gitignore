@@ -1,6 +1,3 @@
-# Variables de entorno
-variables.env
-
 # Logs
 logs
 *.log
@@ -72,6 +69,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
+variables.env
 .env
 .env.test
 
